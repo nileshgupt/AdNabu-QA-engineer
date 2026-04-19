@@ -42,7 +42,7 @@ python -m pip install selenium pytest
 
 ```
 .
-├── test_Adnab.py        # Test script (This file run with pytest)
+├── test_Adnab.py        # Test script (This file run with pytest + selenium setup , used for generating report)
 └── Adnab.py             # Test script (This file will need only selenium setup to run)
 └── chromedriver.exe     # ChromeDriver (or configure path)
 
