@@ -1,0 +1,93 @@
+A) Product Search – Test Cases
+
+1. Valid Product Search (Positive)
+Steps:
+Enter a valid product name (e.g., “T-shirt”) in search bar
+Click search
+Expected Result:
+Relevant products are displayed
+Results match the keyword
+
+2. Partial Keyword Search (Positive)
+Steps:
+Enter partial keyword (e.g., “shirt” instead of full name)
+Expected Result:
+Products containing the keyword are shown
+Search supports partial matching
+
+3. Non-Existent Product Search (Negative)
+Steps:
+Enter random/non-existent keyword (e.g., “xyz123abc”)
+Expected Result:
+“No results found” message displayed
+No irrelevant products shown
+
+4. Special Characters Input (Edge Case)
+Steps:
+Enter special characters (e.g., “@#$%^&*”)
+Expected Result:
+System handles input gracefully
+No crash or error page
+Either no results or validation message
+
+5. Empty Search Submission (Negative)
+Steps:
+Click search without entering input
+Expected Result:
+Either all products shown OR prompt to enter search term
+No system error
+
+6. Case Sensitivity Check (Edge Case)
+Steps:
+Search same product in different cases (e.g., “t-shirt” vs “T-SHIRT”)
+Expected Result:
+Same results returned
+Search is case-insensitive
+
+
+B) Add to Cart – Test Cases
+1. Add Single Product to Cart (Positive)
+Steps:
+Open product page
+Click “Add to Cart”
+Expected Result:
+Product added successfully
+Cart count increases
+
+2. Add Multiple Quantities (Positive)
+Steps:
+Select quantity >1
+Click “Add to Cart”
+Expected Result:
+Correct quantity added
+Cart reflects accurate total
+
+3. Add Out-of-Stock Product (Negative)
+Steps:
+Attempt to add out-of-stock item
+Expected Result:
+Add to Cart disabled OR error message shown
+Item not added
+
+4. Add Without Selecting Required Variant (Negative)
+Steps:
+Open product with variants (size/color)
+Click “Add to Cart” without selecting variant
+Expected Result:
+Validation message displayed
+Product not added
+
+5. Add Same Product Repeatedly (Edge Case)
+Steps:
+Add same product multiple times
+Expected Result:
+Quantity increments correctly
+No duplicate line item issues
+
+6. Add to Cart with Invalid Quantity (Edge Case)
+Steps:
+Enter invalid quantity (e.g., 0, negative number, very large number)
+Click “Add to Cart”
+Expected Result:
+Proper validation message
+System restricts invalid values
